@@ -16,13 +16,13 @@ var citySrch = [];
 function renderButtons(){
     $("#prev-search").empty();
     
+    var storedCities=JSON.parse(localStorage.getItem("citySrch"));
 
-
-    for (var i=0;i<citySrch.length;i++){
+    for (var i=0;i<storedCities.length;i++){
         var a=$("<button>");
         a.addClass("city");
-        a.attr("data-name", citySrch[i]);
-        a.text(citySrch[i]);
+        a.attr("data-name", storedCities[i]);
+        a.text(storedCities[i]);
         $("#prev-search").append(a);
 
     }
@@ -33,6 +33,7 @@ $("#srch-but").on("click", function(event){
     event.preventDefault();
     var srchCity =$("#city-search").val().trim();
     citySrch.push(srchCity);
+    localStorage.setItem("citySrch", JSON.stringify(citySrch));
     renderButtons();
     
 
