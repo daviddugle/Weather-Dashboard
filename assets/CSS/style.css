@@ -5,3 +5,16 @@
     background-color: black;
     padding: 10px;
 }
+.jumbotron{
+    width: 100%;
+}
+.city{
+    width: 100%;
+    background-color: lightblue;
+    height: 45px;
+    font-size: 30px;
+    text-align: center;
+    padding: 2px;
+
+
+}
