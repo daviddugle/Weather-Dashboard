@@ -8,6 +8,7 @@
 -got the html set up 
 -local storage like a BOSS!
 -making a lot of progress with the weather side of it.have the current set up and need to get to the UV index. I am saving the icons for later.
+-have the five day forcast about straight. the icon on the main page is working and need to do the same on the five day
 
 
 

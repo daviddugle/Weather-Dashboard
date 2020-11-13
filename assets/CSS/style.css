@@ -5,8 +5,11 @@
     background-color: black;
     padding: 10px;
 }
-.jumbotron{
+.main-box{
     width: 100%;
+    background-color: cyan;
+    padding: 10px;
+    margin-right: 50px;
 }
 .city{
     width: 100%;
@@ -17,4 +20,15 @@
     padding: 2px;
 
 
+}
+.boxy{
+    background-color: blue;
+    width: 20%;
+    height: 100px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+
+}
+.searcher{
+    margin-bottom: 10px;
 }
