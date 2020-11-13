@@ -44,8 +44,8 @@ var nextDay = moment().add(1, "days");
         citySrch.push(srchCity);
         localStorage.setItem("citySrch", JSON.stringify(citySrch));
         $("#city-search").val("");
-
-
+        // var getWeath =srchCity;
+        getWeather();
         renderButtons();
 
 
@@ -59,7 +59,7 @@ var nextDay = moment().add(1, "days");
 
 
 
-    
+
 
 
     //this section for today's weather
@@ -67,6 +67,18 @@ var nextDay = moment().add(1, "days");
 
     function getWeather() {
         var getWeath = $(this).attr("data-name");
+        localStorage.getItem("citySrch");
+        
+
+        if (getWeath === undefined){
+            getWeath = citySrch[citySrch.length-1];
+            console.log(getWeath);
+            
+        }
+
+
+
+
         var APIKey = "a0bebcdf3f3421ef2b632b830fa93f18";
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + getWeath + "&appid=" + APIKey;
 
@@ -81,7 +93,7 @@ var nextDay = moment().add(1, "days");
             var icon = "http://openweathermap.org/img/wn/" + iconIns + "@2x.png";
             $("#weath-icon").attr("src", icon);
             $("#city-date").text(response.name + " (" + currentDay + ") ");
-            var tempF = (Math.floor(response.main.temp - 273.15) * 1.80 + 32);
+            var tempF = (Math.floor(response.main.temp - 273.15) * 1.80 + 32).toFixed(2);
             $("#curr-temp").text("Current Temp: " + tempF + " F");
             $("#humidity").text("Current Humidity: " + response.main.humidity + "%");
             $("#wind-speed").text("Current Wind Speed: " + response.wind.speed);
@@ -130,7 +142,7 @@ var nextDay = moment().add(1, "days");
                     method: "GET"
                 }).then(function (response) {
 
-
+                    console.log(response);
                     //day one
 
                     $("#day1-date").text(response.list[10].dt_txt);
