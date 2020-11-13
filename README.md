@@ -21,3 +21,4 @@ https://daviddugle.github.io/Weather-Dashboard/
 
 Photos
 ![First Photo](https://github.com/daviddugle/Weather-Dashboard/blob/main/assets/Photos/grid%20layout.jpg)
+![Second Photo](https://github.com/daviddugle/Weather-Dashboard/blob/main/assets/Photos/Screenshot%202020-11-13%20161820.jpg)
