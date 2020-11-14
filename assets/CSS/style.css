@@ -10,6 +10,8 @@
     background-color: cyan;
     padding: 10px;
     margin-right: 20px;
+    
+    
 }
 .city{
     width: 100%;
@@ -18,15 +20,19 @@
     font-size: 30px;
     text-align: center;
     padding: 2px;
+    border-radius: 5%;
 
 
 }
 .boxy{
-    background-color: blue;
+    background-color: teal;
     width: 15%;
     height: 100px;
     margin-left: 2px;
     margin-bottom: 2px;
+    height: 300px;
+    font-weight: bold;
+    border-radius: 5%;
 
 }
 .searcher{
