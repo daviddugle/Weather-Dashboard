@@ -32,3 +32,18 @@
 .searcher{
     margin-bottom: 10px;
 }
+.high{
+    background-color: red;
+    width: 80px;
+    border-radius: 15%;
+}
+.med{
+    background-color: yellow;
+    width: 80px;
+    border-radius: 15%;
+}
+.low{
+    background-color: white;
+    width: 80px;
+    border-radius: 15%;
+}

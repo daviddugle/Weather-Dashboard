@@ -61,6 +61,8 @@ renderButtons();
 //this should refresh the page with the last item in the list.
 getWeather();
 
+var latCheck="";
+var lonCheck="";
 
 //this section for today's weather
 
@@ -72,7 +74,7 @@ function getWeather() {
 
     if (getWeath === undefined) {
         getWeath = citySrch[citySrch.length - 1];
-        console.log(getWeath);
+        
 
     }
 
@@ -97,28 +99,45 @@ function getWeather() {
         $("#curr-temp").text("Current Temp: " + tempF + " F");
         $("#humidity").text("Current Humidity: " + response.main.humidity + "%");
         $("#wind-speed").text("Current Wind Speed: " + response.wind.speed);
+        latCheck =(response.coord.lat);
+        lonCheck = (response.coord.lon);
+        
+        indexUV();
+        
 
-        console.log(response);
+        function indexUV(){
+
+               
+            
+            var queryURL3 = "http://api.openweathermap.org/data/2.5/uvi?lat="+  latCheck +"&lon="+ lonCheck +"&appid=" + APIKey;
+
+            $.ajax({
+                url: queryURL3,
+                method: "GET"
+            }).then(function (response) {
+
+                var uvDiv =$("<div>");
+                uvDiv.text("UV Index: " + response.value);
+                if (uvDiv > 6){
+                    uvDiv.addClass("high");
+                }
+                else if (uvDiv < 3 ){
+                    uvDiv.addClass("low");
+                }
+                else{
+                    uvDiv.addClass("med")
+                }
 
 
-        // indexUV();
-        // var latCheck =(response.coord.lat);
-        // var lonCheck = (response.coord.lon);
-
-        // function indexUV(){
 
 
-        //     apiKey3 = "a0bebcdf3f3421ef2b632b830fa93f18";
-        //     var queryURL3 = "http://api.openweathermap.org/data/2.5/uvi?lat="+ latCheck +"&lon="+ lonCheck +"&appid="+ apiKey3;
 
-        //     $.ajax({
-        //         url: queryURL3,
-        //         method: "GET"
-        //     }).then(function (response) {
 
-        //         console.log(response);
+                $("#uv-index").append(uvDiv);
 
-        // })}
+                console.log(response.value);
+
+        })}
 
 
 
