@@ -9,7 +9,7 @@
     width: 80%;
     background-color: cyan;
     padding: 10px;
-    margin-right: 20px;
+    
     
     
 }
@@ -37,6 +37,7 @@
 }
 .searcher{
     margin-bottom: 10px;
+    
 }
 .high{
     background-color: red;

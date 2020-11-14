@@ -27,65 +27,65 @@
         <div class="row">
 
             <!-- the first column will need an input area/a button to submit with font awesome magnifier/ a section below to append buttons to -->
-            <aside class="col-md-3 searcher">
-                <label for="search-area">Search for a US City:</label>
+            <aside class="col-md-3 searcher col-sm-3">
+                <label id="search-area">Search for a US City:</label>
                 <input type="text" id="city-search">
                 <button type="button" class="btn btn-primary" id="srch-but"><i class="fas fa-search"></i></button>
                 <div id="prev-search"></div>
             </aside>
             <!-- The second column will be divided up between two sub rows/ first sub row will have the current weather/ second sub row will have five columns for the five day forcast -->
             <div class="container">
-            <div class="row">
+                <div class="row">
 
-                <section class="col-md-12">
-                    <div class="main-box">
-                        <h1 class="display-4" id="city-date"></h1>
-                        <img id="weath-icon">
-                        <div id="curr-temp"></div>
-                        <div id="humidity"></div>
-                        <div id="wind-speed"></div>
-                        <div id="uv-index" class="uv-index"></div>
+                    <section class="col-md-12">
+                        <div class="main-box">
+                            <h2 class="display-4" id="city-date"></h2>
+                            <img id="weath-icon" alt="weather-icon">
+                            <div id="curr-temp"></div>
+                            <div id="humidity"></div>
+                            <div id="wind-speed"></div>
+                            <div id="uv-index" class="uv-index"></div>
 
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col boxy" id="day1">
+                        <div id="day1-date"></div>
+                        <img id="day1-icon" alt="weather-icon">
+                        <div id="day1-temp"></div>
+                        <div id="day1-humidity"></div>
                     </div>
-
-                </section>
-
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col boxy" id="day1">
-                    <div id="day1-date"></div>
-                    <img id="day1-icon">
-                    <div id="day1-temp"></div>
-                    <div id="day1-humidity"></div>
-                </div>
-                <div class="col boxy" id="day2">
-                    <div id="day2-date"></div>
-                    <img id="day2-icon">
-                    <div id="day2-temp"></div>
-                    <div id="day2-humidity"></div>
-                </div>
-                <div class="col boxy" id="day3">
-                    <div id="day3-date"></div>
-                    <img id="day3-icon">
-                    <div id="day3-temp"></div>
-                    <div id="day3-humidity"></div>
-                </div>
-                <div class="col boxy" id="day4">
-                    <div id="day4-date"></div>
-                    <img id="day4-icon">
-                    <div id="day4-temp"></div>
-                    <div id="day4-humidity"></div>
-                </div>
-                <div class="col boxy" id="day5">
-                    <div id="day5-date"></div>
-                    <img id="day5-icon">
-                    <div id="day5-temp"></div>
-                    <div id="day5-humidity"></div>
+                    <div class="col boxy" id="day2">
+                        <div id="day2-date"></div>
+                        <img id="day2-icon" alt="weather-icon">
+                        <div id="day2-temp"></div>
+                        <div id="day2-humidity"></div>
+                    </div>
+                    <div class="col boxy" id="day3">
+                        <div id="day3-date"></div>
+                        <img id="day3-icon" alt="weather-icon">
+                        <div id="day3-temp"></div>
+                        <div id="day3-humidity"></div>
+                    </div>
+                    <div class="col boxy" id="day4">
+                        <div id="day4-date"></div>
+                        <img id="day4-icon" alt="weather-icon">
+                        <div id="day4-temp"></div>
+                        <div id="day4-humidity"></div>
+                    </div>
+                    <div class="col boxy" id="day5">
+                        <div id="day5-date"></div>
+                        <img id="day5-icon" alt="weather-icon">
+                        <div id="day5-temp"></div>
+                        <div id="day5-humidity"></div>
+                    </div>
                 </div>
             </div>
-        </div>
 
 
 
@@ -98,7 +98,7 @@
 
 
 
-        </div>
+
 
 
 

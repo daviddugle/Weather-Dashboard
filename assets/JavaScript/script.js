@@ -47,6 +47,7 @@ $("#srch-but").on("click", function (event) {
     // var getWeath =srchCity;
     getWeather();
     renderButtons();
+    $("#uv-index").removeClass();
 
 
 })
@@ -116,13 +117,13 @@ function getWeather() {
                 url: queryURL3,
                 method: "GET"
             }).then(function (response) {
-
+                
                 var uvDiv =$("<div>");
                 uvDiv.text("UV Index: " + response.value);
-                if (uvDiv > 6){
+                if (response.value > 6){
                     uvDiv.addClass("high");
                 }
-                else if (uvDiv < 3 ){
+                else if (response.value < 3 ){
                     uvDiv.addClass("low");
                 }
                 else{
@@ -136,7 +137,7 @@ function getWeather() {
 
                 $("#uv-index").append(uvDiv);
 
-                console.log(response.value);
+               
 
         })}
 
