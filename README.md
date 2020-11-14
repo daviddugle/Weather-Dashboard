@@ -13,7 +13,7 @@ This was a super challenging exercise. I felt like the best aveneue for me to ap
 -have the five day forcast about straight. the icon on the main page is working and need to do the same on the five day
 -got the uv index working correctly.  had problems with the order of operation and once I figured that out it was pretty smooth sailing.
 -got the icons sorted out now for the five day
-
+-uv index was repeating itself, had to get it cleared 
 
 
 

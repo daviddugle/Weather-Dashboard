@@ -101,6 +101,7 @@ function getWeather() {
         $("#wind-speed").text("Current Wind Speed: " + response.wind.speed);
         latCheck =(response.coord.lat);
         lonCheck = (response.coord.lon);
+        $("#uv-index").text("");
         
         indexUV();
         
