@@ -9,7 +9,7 @@ body{
     color: white;
     background-color: black;
     padding: 10px;
-    text-shadow: 2px 2px 5px red;
+    text-shadow: 2px 2px 5px white;
 }
 .btn:hover{
 
@@ -49,7 +49,7 @@ input[type=text]:focus{
     text-align: center;
     
     border-radius: 5%;
-    text-shadow: 2px 2px 5px red;
+    text-shadow: 2px 2px 5px white;
 
 }
 .city:hover{
@@ -63,7 +63,7 @@ input[type=text]:focus{
     
 }
 .boxy{
-    background-color: teal;
+    background-color: rgb(90, 72, 248);
     width: 15%;
     height: 100px;
     margin-left: 2px;
