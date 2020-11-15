@@ -1,28 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 .header{
     text-align: center;
     font-size: 50px;
     color: white;
     background-color: black;
     padding: 10px;
+    text-shadow: 2px 2px 5px red;
+}
+.btn:hover{
+
+    color: red;
+    text-shadow: 2px 2px 5px white;
+    transition: .3s;
+    
+
+}
+input[type=text]{
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    /* margin: 8px; */
+    outline: none;
+    /* padding: 8px; */
+    /* box-sizing: border-box; */
+    transition: .3s;
+
+}
+input[type=text]:focus{
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
 }
 .main-box{
     width: 80%;
     background-color: cyan;
     padding: 10px;
-    
+    text-shadow: 2px 2px 5px red;
     
     
 }
 .city{
     width: 100%;
     background-color: lightblue;
-    height: 45px;
+    height: 48px;
     font-size: 30px;
     text-align: center;
-    padding: 2px;
+    
     border-radius: 5%;
+    text-shadow: 2px 2px 5px red;
 
-
+}
+.city:hover{
+    
+    background-color: dodgerblue;
+    text-shadow: 2px 2px 5px white;
+    transition: .3s;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+    
 }
 .boxy{
     background-color: teal;
@@ -33,10 +71,12 @@
     height: 300px;
     font-weight: bold;
     border-radius: 5%;
+    text-shadow: 2px 2px 5px white;
 
 }
 .searcher{
     margin-bottom: 10px;
+    text-shadow: 2px 2px 5px red;
     
 }
 .high{
