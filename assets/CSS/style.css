@@ -52,7 +52,7 @@ input[type=text]:focus{
     text-shadow: 2px 2px 5px red;
 
 }
-.city:hover{
+/* .city:hover{
     
     background-color: dodgerblue;
     text-shadow: 2px 2px 5px white;
@@ -61,7 +61,7 @@ input[type=text]:focus{
     font-weight: bold;
     
     
-}
+} */
 .boxy{
     background-color: teal;
     width: 15%;
