@@ -62,8 +62,8 @@ renderButtons();
 //this should refresh the page with the last item in the list.
 getWeather();
 
-var latCheck="";
-var lonCheck="";
+var latCheck = "";
+var lonCheck = "";
 
 //this section for today's weather
 
@@ -75,7 +75,7 @@ function getWeather() {
 
     if (getWeath === undefined) {
         getWeath = citySrch[citySrch.length - 1];
-        
+
 
     }
 
@@ -100,33 +100,33 @@ function getWeather() {
         $("#curr-temp").text("Current Temp: " + tempF + " F");
         $("#humidity").text("Current Humidity: " + response.main.humidity + "%");
         $("#wind-speed").text("Current Wind Speed: " + response.wind.speed);
-        latCheck =(response.coord.lat);
+        latCheck = (response.coord.lat);
         lonCheck = (response.coord.lon);
         $("#uv-index").text("");
-        
-        indexUV();
-        
-        //got the uv index in this area right here.pretty proud of my if statements    
-        function indexUV(){
 
-               
-            
-            var queryURL3 = "https://api.openweathermap.org/data/2.5/uvi?lat="+  latCheck +"&lon="+ lonCheck +"&appid=" + APIKey;
+        indexUV();
+
+        //got the uv index in this area right here.pretty proud of my if statements    
+        function indexUV() {
+
+
+
+            var queryURL3 = "https://api.openweathermap.org/data/2.5/uvi?lat=" + latCheck + "&lon=" + lonCheck + "&appid=" + APIKey;
 
             $.ajax({
                 url: queryURL3,
                 method: "GET"
             }).then(function (response) {
-                
-                var uvDiv =$("<div>");
+
+                var uvDiv = $("<div>");
                 uvDiv.text("UV Index: " + response.value);
-                if (response.value > 6){
+                if (response.value > 6) {
                     uvDiv.addClass("high");
                 }
-                else if (response.value < 3 ){
+                else if (response.value < 3) {
                     uvDiv.addClass("low");
                 }
-                else{
+                else {
                     uvDiv.addClass("med")
                 }
 
@@ -137,9 +137,10 @@ function getWeather() {
 
                 $("#uv-index").append(uvDiv);
 
-               
 
-        })}
+
+            })
+        }
 
 
 
@@ -150,7 +151,7 @@ function getWeather() {
 
 
         fiveDay();
-
+        //this section is for the 5 day forcast
         function fiveDay() {
 
 
@@ -162,20 +163,20 @@ function getWeather() {
                 url: queryURL2,
                 method: "GET"
             }).then(function (response) {
-                for(let i = 0; i<response.list.length; i++){
+                for (let i = 0; i < response.list.length; i++) {
                     var timeWeather = response.list[i]
-                    if(timeWeather.dt_txt.split(" ")[1] === "15:00:00"){
-                        console.log(timeWeather)
+                    if (timeWeather.dt_txt.split(" ")[1] === "15:00:00") {
+                        
                         var day = $("<div>").text(timeWeather.dt_txt.split(" ")[0]);
                         day.addClass("col-md-2 boxy")
                         var iconIns1 = timeWeather.weather[0].icon;
-                        var icon1 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + iconIns1 + "@2x.png" );
-                        var tempF1 =  $("<div>").text("Temp: " +timeWeather.main.temp + "F");
+                        var icon1 = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + iconIns1 + "@2x.png");
+                        var tempF1 = $("<div>").text("Temp: " + timeWeather.main.temp + "F");
                         var humid = $("<div>").text("Humidity:" + timeWeather.main.humidity + "%");
                         day.append(icon1, tempF1, humid)
                         $(".fiveDay").append(day)
                     }
-    
+
                 }
 
                 //day one
@@ -190,7 +191,7 @@ function getWeather() {
 
                 // //day two                
                 // $("#day2-date").text(response.list[18].dt_txt);
-                
+
                 // var iconIns2 = (response.list[18].weather[0].icon);
                 // var icon2 = "http://openweathermap.org/img/wn/" + iconIns2 + "@2x.png";
                 // console.log(icon2);
@@ -259,4 +260,3 @@ function getWeather() {
 
 $(document).on("click", ".city", getWeather);
 
-//this section is for the 5 day forcast
