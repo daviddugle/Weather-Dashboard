@@ -93,7 +93,7 @@ function getWeather() {
 
 
         var iconIns = (response.weather[0].icon);
-        var icon = "http://openweathermap.org/img/wn/" + iconIns + "@2x.png";
+        var icon = "https://openweathermap.org/img/wn/" + iconIns + "@2x.png";
         $("#weath-icon").attr("src", icon);
         $("#city-date").text(response.name + " (" + currentDay + ") ");
         var tempF = (Math.floor(response.main.temp - 273.15) * 1.80 + 32).toFixed(2);
@@ -111,7 +111,7 @@ function getWeather() {
 
                
             
-            var queryURL3 = "http://api.openweathermap.org/data/2.5/uvi?lat="+  latCheck +"&lon="+ lonCheck +"&appid=" + APIKey;
+            var queryURL3 = "https://api.openweathermap.org/data/2.5/uvi?lat="+  latCheck +"&lon="+ lonCheck +"&appid=" + APIKey;
 
             $.ajax({
                 url: queryURL3,
