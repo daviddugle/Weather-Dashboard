@@ -64,7 +64,7 @@ input[type=text]:focus{
 }
 .boxy{
     background-color: rgb(90, 72, 248);
-    width: 15%;
+    width: 170px;
     height: 100px;
     margin-left: 2px;
     margin-bottom: 2px;
